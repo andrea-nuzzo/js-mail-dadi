@@ -36,3 +36,27 @@ submitMail.addEventListener("click", function(){
 Gioco dei dadi Generare un numero random da 1 a 6, 
 sia per il giocatore sia per il computer. 
 Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
+
+// seleziono il bottone
+const submitDices = document.getElementById('btnDices');
+
+// All'evento click ...
+submitDices.addEventListener("click", function(){
+   
+    //genero due numeri casuali
+    let numbPlayer1 = Math.floor(Math.random() * 6 ) + 1;
+    let numbPlayer2 = Math.floor(Math.random() * 6 ) + 1;
+
+    // inserisco i random nei box html
+    document.getElementById('player1').innerHTML = numbPlayer1;
+    document.getElementById('player2').innerHTML = numbPlayer2;
+
+    // calcolo il vincitore
+    if (numbPlayer1 == numbPlayer2){
+        document.getElementById('winner').innerHTML = 'Draw';
+    } else if(numbPlayer1 > numbPlayer2){
+        document.getElementById('winner').innerHTML = 'Player 1';
+    } else{
+        document.getElementById('winner').innerHTML = 'Player 2';
+    }
+} );
