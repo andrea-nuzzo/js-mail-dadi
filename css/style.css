@@ -8,14 +8,19 @@ body {
 
 }
 
-.box-3{
+.colorBtnDices, .colorWinner{
     background-color: #5fd2a4;
 }
 
-.box-5{
+.colorPlayer1{
     background-color: #f8d277;
 }
 
-.box-3-5{
+.colorPlayer2{
     background-color: #de5470;
+}
+
+.player{
+    height: 100px;
+    border: 1px solid white;
 }
